@@ -1,0 +1,20 @@
+[user]
+	name = kewei
+	email = kewei.chen@happygorgi.com
+[color]
+	ui = auto
+	diff = auto
+	branch = auto
+	status = auto
+	log = auto
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+	gr = log --graph --pretty=format:'%Cred%h%Creset%x09%C(yellow) %d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[push]
+	default = current
+[rerere]
+	enabled = true
