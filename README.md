@@ -1,7 +1,8 @@
 ## My configuration file
 
 ```markdown
-My configuration file
+Hello I am Kewei.
+Here is just my configuration file. Feel free to clone or copy to apply to fit your taste.
 ```
 
 ## Welcome to GitHub Pages
