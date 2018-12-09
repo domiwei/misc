@@ -1,0 +1,81 @@
+set nocompatible              " be iMproved, required
+"filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install plugins
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+Plugin 'fatih/molokai'
+Plugin 'fatih/vim-go'
+Plugin 'zivyangll/git-blame.vim'
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_autosave = 0
+let g:go_fmt_command = "goimports"
+let g:mapleader = "g"
+"let g:go_fmt_command = "goimports"
+
+let g:go_version_warning = 0 "do not show warning
+
+
+" *** Pathogen
+"   http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen/
+"call pathogen#infect()
+"call pathogen#helptags()
+
+" Enable filetype plugins 
+filetype plugin on
+au FileType go nmap <Leader>im <Plug>(go-implements)
+au FileType go nmap <Leader>in <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+
+nnoremap <S-Up> gT
+nnoremap <S-Down> gt
+
+" 檔案編碼
+set encoding=utf-8
+set fileencodings=utf-8,cp950
+set nu 
+" 編輯喜好設定                                                                                                                                                                                                     
+syntax on        " 語法上色顯示
+set nocompatible " VIM 不使用和 VI 相容的模式
+" set ai           " 自動縮排
+set shiftwidth=4 " 設定縮排寬度 = 4 
+set tabstop=4    " tab 的字元數
+set softtabstop=4
+"set expandtab   " 用 space 代替 tab
+ 
+set ruler        " 顯示右下角設定值
+set backspace=2  " 在 insert 也可用 backspace
+set ic           " 設定搜尋忽略大小寫
+set ru           " 第幾行第幾個字
+set hlsearch     " 設定高亮度顯示搜尋結果
+set incsearch    " 在關鍵字還沒完全輸入完畢前就顯示結果
+set smartindent  " 設定 smartindent
+set confirm      " 操作過程有衝突時，以明確的文字來詢問
+set history=100  " 保留 100 個使用過的指令
+set cursorline   " 顯示目前的游標位置
+ 
+set laststatus=2
+set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
+ 
+colorscheme lucid
+"colorscheme falcon

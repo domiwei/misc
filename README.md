@@ -1,7 +1,7 @@
-## Test
+## My configuration file
 
 ```markdown
-This is a test
+My configuration file
 ```
 
 ## Welcome to GitHub Pages
